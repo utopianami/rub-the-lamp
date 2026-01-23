@@ -6,16 +6,13 @@
 
 ## 사용 목적
 
-### 1. 확증 편향 방지 (Self-Bias Prevention)
+### 1. 역할 분리
+- Claude = 코딩, Cursor = 리뷰 (각자 전문 영역에 집중)
+- 작성자와 검증자를 분리하여 품질 향상
 
-- 자기가 만든 답의 오류를 스스로 찾지 못하는 문제 해결
-- 동일 모델은 동일한 blind spot을 공유하므로, 독립된 '제3자의 시선' 확보 필요
-- Self-consistency ≠ Correctness: 논리적으로 일관되지만 틀린 결과를 통과시키는 위험 방지
-
-### 2. 교차 검증 (Cross-Check)
-
-- 서로 다른 모델의 강점을 활용하여 상호 보완
-- 다른 추론 경로로 edge case 탐색 → Adversarial 관점 확보
+### 2. 교차 검증
+- 다른 모델이 blind spot과 edge case 검증
+- Self-consistency ≠ Correctness 문제 방지
 
 ---
 
@@ -112,17 +109,14 @@ Cursor가 모든 항목 [good] 처리 → "완료" 상태로 변경 → 해당 �
 
 ## 왜 이 프로토콜을 따르는가?
 
-### 1. 확증 편향 방지 (Self-Bias Prevention)
-- 자기가 만든 답의 오류를 스스로 찾지 못하는 문제 해결
-- 동일 모델은 동일한 blind spot을 공유하므로, 독립된 '제3자의 시선' 확보 필요
-- Self-consistency ≠ Correctness: 논리적으로 일관되지만 틀린 결과를 통과시키는 위험 방지
+### 1. 역할 분리
+- Claude = 코딩, Cursor = 리뷰 (각자 전문 영역에 집중)
 
-### 2. 교차 검증 (Cross-Check)
-- 서로 다른 모델의 강점을 활용하여 상호 보완
-- 한 모델이 놓치는 논리적 오류나 환각(Hallucination)을 다른 모델이 발견
-- 다른 추론 경로로 edge case 탐색 → Adversarial 관점 확보
+### 2. 교차 검증
+- 다른 모델이 blind spot과 edge case 검증
+- Self-consistency ≠ Correctness 문제 방지
 
-**너(Claude)는 코딩 역할, 리뷰어(다른 모델)는 검증 역할이다.**
+**너(Claude)는 코딩 역할, 리뷰어(Cursor)는 검증 역할이다.**
 
 ---
 
