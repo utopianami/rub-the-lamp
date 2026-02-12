@@ -54,6 +54,10 @@ set -g mouse on
 set -g base-index 1
 set -g pane-base-index 1
 set -g default-terminal "tmux-256color"
+
+# --- 하단 단축키 가이드 ---
+set -g status 2
+set -g status-format[1] '#[align=centre,bg=#3c3836,fg=#a89984] Split: "─  %│  |  Move: ←↑↓→  |  Resize: C-←↑↓→  |  Zoom: z  |  New: c  |  Next: n  |  Detach: d  |  List: w '
 ```
 
 설정 적용:
