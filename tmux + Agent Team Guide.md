@@ -41,9 +41,7 @@ set -g window-active-style "fg=#ebdbb2,bg=#282828"
 set -g status-position bottom
 set -g status-style "bg=#282828,fg=#a89984"
 set -g status-left "#[bg=#d65d0e,fg=#282828,bold] #S #[bg=#282828] "
-set -g status-right "#[fg=#a89984] #(TZ=Asia/Seoul date '+%%m/%%d %%H:%%M') "
 set -g status-left-length 30
-set -g status-right-length 30
 
 # --- 윈도우 탭 ---
 set -g window-status-format "#[fg=#665c54] #I:#W "
@@ -55,9 +53,9 @@ set -g base-index 1
 set -g pane-base-index 1
 set -g default-terminal "tmux-256color"
 
-# --- 하단 단축키 가이드 ---
-set -g status 2
-set -g status-format[1] '#[align=centre,bg=#3c3836,fg=#a89984] Split: "─  %│  |  Move: ←↑↓→  |  Resize: C-←↑↓→  |  Zoom: z  |  New: c  |  Next: n  |  Detach: d  |  List: w '
+# --- 상태바 우측: 단축키 가이드 + 시간 ---
+set -g status-right "#[fg=#665c54]─:#[fg=#a89984]\"  #[fg=#665c54]│:#[fg=#a89984]%  #[fg=#665c54]이동:#[fg=#a89984]←↑↓→  #[fg=#665c54]확대:#[fg=#a89984]z  #[fg=#665c54]패널닫기:#[fg=#a89984]x  #[fg=#665c54]탭:#[fg=#a89984]c/n/p  #[fg=#665c54]이름:#[fg=#a89984],  #[fg=#665c54]목록:#[fg=#a89984]w  #[fg=#665c54]탭닫기:#[fg=#a89984]&  #[fg=#665c54]분리:#[fg=#a89984]!  #[fg=#665c54]교체:#[fg=#a89984]{/}  #[fg=#665c54]탈출:#[fg=#a89984]q  #[fg=#d65d0e]%H:%M "
+set -g status-right-length 150
 ```
 
 설정 적용:
