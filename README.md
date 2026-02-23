@@ -12,6 +12,7 @@ AI 협업 개발 환경을 위한 도구 모음입니다.
 | **Spec Kit + Test Workflow** | 피처 개발 사이클 (스펙 → 테스트 → 구현) | [Setup Guide](Spec%20Kit%20Setup%20Guide.md) |
 | **oh-my-claudecode** | Claude Code 다중 에이전트 오케스트레이션 | [GitHub](https://github.com/Yeachan-Heo/oh-my-claudecode) |
 | **tmux + Agent Team** | 멀티 에이전트 병렬 실행 환경 | [Guide](tmux%20%2B%20Agent%20Team%20Guide.md) |
+| **Karpathy 세팅** | LLM 코딩 실수 방지 행동 지침 (4원칙) | [Setup Guide](Karpathy%20Claude%20Code%20%EC%84%B8%ED%8C%85.md) |
 
 ---
 
@@ -67,6 +68,21 @@ tmux 터미널 멀티플렉서로 **여러 Claude 에이전트를 물리적으�
 
 ---
 
+## Karpathy 세팅
+
+Andrej Karpathy의 **LLM 코딩 행동 지침 4원칙**. CLAUDE.md(글로벌)와 Plugin 두 가지로 설치합니다. CLAUDE.md는 매 대화마다 자동 로드되고, Plugin은 작업 맥락에 맞게 Skills를 자동 로드합니다.
+
+| 원칙 | 핵심 |
+|------|------|
+| Think Before Coding | 가정하지 말고, 모호하면 물어봐라 |
+| Simplicity First | 최소한의 코드, 과도한 추상화 금지 |
+| Surgical Changes | 요청한 것만 건드려라 |
+| Goal-Driven Execution | "해줘" 대신 "성공 기준"을 줘라 |
+
+> 상세 가이드: [Karpathy Claude Code 세팅.md](Karpathy%20Claude%20Code%20%EC%84%B8%ED%8C%85.md)
+
+---
+
 ## 조합 가이드
 
 도구들을 조합해서 사용하는 시나리오 모음입니다.
@@ -86,8 +102,8 @@ tmux 터미널 멀티플렉서로 **여러 Claude 에이전트를 물리적으�
 
 ```
 ┌─────────────────────────────────────────────┐
-│ ~/.claude/CLAUDE.md                         │ ← oh-my-claudecode
-│   - ralph, ultrawork, planning 등           │
+│ ~/.claude/CLAUDE.md                         │ ← oh-my-claudecode + Karpathy
+│   - ralph, ultrawork, planning, 4원칙 등    │
 ├─────────────────────────────────────────────┤
 │ /project/CLAUDE.md + .cursorrules           │ ← AI-LINK
 │   - 코드 작성 후 AI-LINK.md 업데이트        │
